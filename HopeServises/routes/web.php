@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MaterialGroupController;
 use App\Http\Controllers\MaterialTypeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -27,4 +28,5 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('material-types', MaterialTypeController::class);
 
+Route::resource('material-groups', MaterialGroupController::class);
 require __DIR__.'/auth.php';

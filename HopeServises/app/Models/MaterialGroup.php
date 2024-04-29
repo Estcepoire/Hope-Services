@@ -26,4 +26,9 @@ class MaterialGroup extends Model
         'name',
         'material_type_id'
     ];
+
+    public function materialType()
+    {
+        return $this->belongsTo(MaterialType::class);
+    }
 }

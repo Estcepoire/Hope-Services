@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MaterialGroup;
+use App\Models\MaterialType;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class MaterialGroupController extends Controller
 {
@@ -11,7 +14,11 @@ class MaterialGroupController extends Controller
      */
     public function index()
     {
-        //
+        //get all data includes material types with name
+        $materialGroups = MaterialGroup::with('materialType')->get();
+        return Inertia::render('MaterialGroup/Index', [
+            'materialGroups' => $materialGroups
+        ]);
     }
 
     /**
@@ -19,7 +26,10 @@ class MaterialGroupController extends Controller
      */
     public function create()
     {
-        //
+        $materialTypes = MaterialType::all();
+        return Inertia::render('MaterialGroup/Create', [
+            'materialTypes' => $materialTypes
+        ]);
     }
 
     /**
@@ -27,7 +37,15 @@ class MaterialGroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //store data
+        $name = $request->input('name');
+        $materialTypeId = $request->input('material_type_id');
+        $materialGroup = new MaterialGroup();
+        $materialGroup->name = $name;
+        $materialGroup->material_type_id = $materialTypeId;
+        $materialGroup->save();
+        //return redirect()->route('material-groups.index');
+        dd("Material group created successfully");
     }
 
     /**
@@ -43,7 +61,13 @@ class MaterialGroupController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $materialTypes = MaterialType::all();
+        $materialTypes = collect($materialTypes);
+        $materialGroup = MaterialGroup::find($id);
+        return Inertia::render('MaterialGroup/Edit', [
+            'materialGroup' => $materialGroup,
+            'materialTypes' => $materialTypes
+        ]);
     }
 
     /**
@@ -51,7 +75,15 @@ class MaterialGroupController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //update data
+        $name = $request->input('name');
+        $materialTypeId = $request->input('material_type_id');
+        $materialGroup = MaterialGroup::find($id);
+        $materialGroup->name = $name;
+        $materialGroup->material_type_id = $materialTypeId;
+        $materialGroup->save();
+        //return redirect()->route('material-groups.index');
+        dd("Material group updated successfully");
     }
 
     /**
@@ -59,6 +91,10 @@ class MaterialGroupController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        //delete data
+        $materialGroup = MaterialGroup::find($id);
+        $materialGroup->delete();
+        //return redirect()->route('material-groups.index');
+        dd("Material group deleted successfully");
     }
 }
