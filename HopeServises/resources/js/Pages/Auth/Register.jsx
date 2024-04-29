@@ -8,7 +8,10 @@ import { Head, Link, useForm } from '@inertiajs/react';
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
+        first_name: '',
         name: '',
+        company_name: '',
+        phone_number: '',
         email: '',
         password: '',
         password_confirmation: '',
@@ -32,20 +35,68 @@ export default function Register() {
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="name" value="Name" />
+                    <InputLabel htmlFor="first_name" value="First Name" />
+
+                    <TextInput
+                        id="first_name"
+                        name="first_name"
+                        value={data.first_name}
+                        className="mt-1 block w-full"
+                        autoComplete="given-name"
+                        isFocused={true}
+                        onChange={(e) => setData('first_name', e.target.value)}
+                        required
+                    />
+
+                    <InputError message={errors.first_name} className="mt-2" />
+                </div>
+
+                <div className="mt-4">
+                    <InputLabel htmlFor="name" value="Last Name" />
 
                     <TextInput
                         id="name"
                         name="name"
                         value={data.name}
                         className="mt-1 block w-full"
-                        autoComplete="name"
-                        isFocused={true}
+                        autoComplete="family-name"
                         onChange={(e) => setData('name', e.target.value)}
                         required
                     />
 
                     <InputError message={errors.name} className="mt-2" />
+                </div>
+
+                <div className="mt-4">
+                    <InputLabel htmlFor="company_name" value="Company Name" />
+
+                    <TextInput
+                        id="company_name"
+                        name="company_name"
+                        value={data.company_name}
+                        className="mt-1 block w-full"
+                        autoComplete="organization"
+                        onChange={(e) => setData('company_name', e.target.value)}
+                        required
+                    />
+
+                    <InputError message={errors.company_name} className="mt-2" />
+                </div>
+
+                <div className="mt-4">
+                    <InputLabel htmlFor="phone_number" value="Phone Number" />
+
+                    <TextInput
+                        id="phone_number"
+                        name="phone_number"
+                        value={data.phone_number}
+                        className="mt-1 block w-full"
+                        autoComplete="tel"
+                        onChange={(e) => setData('phone_number', e.target.value)}
+                        required
+                    />
+
+                    <InputError message={errors.phone_number} className="mt-2" />
                 </div>
 
                 <div className="mt-4">
@@ -57,7 +108,7 @@ export default function Register() {
                         name="email"
                         value={data.email}
                         className="mt-1 block w-full"
-                        autoComplete="username"
+                        autoComplete="email"
                         onChange={(e) => setData('email', e.target.value)}
                         required
                     />
