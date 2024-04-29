@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef86e5ea-e818-4be8-baed-ce4e906aee66" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/HopeServises/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialGroupController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialTypeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/app/Models/Material.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/app/Models/MaterialGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/app/Models/MaterialType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialType/Create.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialType/Edit.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialType/Form.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialType/Index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HopeServises/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HopeServises/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HopeServises/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,21 +34,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "TheKraken9"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TheKraken9&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Estcepoire/Hope-Services.git",
-    "accountId": "4673a000-e1ba-4640-bfee-97c84fced7b1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Estcepoire/Hope-Services.git&quot;,
+    &quot;accountId&quot;: &quot;4673a000-e1ba-4640-bfee-97c84fced7b1&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2">
     <include_path>
       <path value="$PROJECT_DIR$/HopeServises/vendor/phpunit/php-text-template" />
@@ -155,17 +169,22 @@
       <path value="$PROJECT_DIR$/HopeServises/vendor/phpunit/php-timer" />
     </include_path>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2fk4bdm3crd5wHggpMF5X37UMh0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "material",
     "ignore_missing_gitignore": "true",
@@ -207,10 +226,15 @@
       <option name="presentableId" value="Default" />
       <updated>1714331815795</updated>
       <workItem from="1714331819718" duration="2791000" />
+      <workItem from="1714379996687" duration="356000" />
+      <workItem from="1714409230233" duration="9433000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
