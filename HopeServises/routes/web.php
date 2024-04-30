@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\MaterialGroupController;
 use App\Http\Controllers\MaterialTypeController;
 use App\Http\Controllers\ProfileController;
@@ -28,5 +29,8 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('material-types', MaterialTypeController::class);
 
+//Route::put('/material-groups/{id}', [MaterialGroupController::class, 'update'])->name('material-groups.update');
 Route::resource('material-groups', MaterialGroupController::class);
+
+Route::resource('materials', MaterialController::class);
 require __DIR__.'/auth.php';

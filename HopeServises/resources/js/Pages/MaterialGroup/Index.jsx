@@ -12,6 +12,7 @@ const Index = ({ materialGroups }) => {
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Material Type</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -20,6 +21,7 @@ const Index = ({ materialGroups }) => {
                     <tr key={materialGroup.id}>
                         <td>{materialGroup.id}</td>
                         <td>{materialGroup.name}</td>
+                        <td>{materialGroup.material_type.name}</td>
                         <td>
                             <a href={`/material-groups/${materialGroup.id}/edit`}>Edit</a> |
                             <button onClick={() => Inertia.delete(`/material-groups/${materialGroup.id}`)}>Delete</button>

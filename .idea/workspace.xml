@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef86e5ea-e818-4be8-baed-ce4e906aee66" name="Changes" comment="insert material type CRUD">
-      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Create.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Edit.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Form.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Index.jsx" afterDir="false" />
+    <list default="true" id="ef86e5ea-e818-4be8-baed-ce4e906aee66" name="Changes" comment="insert material group CRUD">
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/Material/Create.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/Material/Edit.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/Material/Form.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/Material/Index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialGroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialGroupController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HopeServises/app/Models/MaterialGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/app/Models/MaterialGroup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HopeServises/app/Models/Material.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/app/Models/Material.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/resources/js/Pages/MaterialGroup/Index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HopeServises/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,23 +176,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "material",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "/home/thekraken9/Documents/Hope-Services/HopeServises",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;material&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/thekraken9/Documents/Hope-Services/HopeServises&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/HopeServises" />
@@ -204,8 +207,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
-        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PS-241.15989.102" />
+        <option value="bundled-php-predefined-ba97393d7c68-c76157a7178b-com.jetbrains.php.sharedIndexes-PS-241.15989.102" />
       </set>
     </attachedChunks>
   </component>
@@ -219,7 +222,8 @@
       <updated>1714331815795</updated>
       <workItem from="1714331819718" duration="2791000" />
       <workItem from="1714379996687" duration="356000" />
-      <workItem from="1714409230233" duration="18091000" />
+      <workItem from="1714409230233" duration="18194000" />
+      <workItem from="1714456090038" duration="5888000" />
     </task>
     <task id="LOCAL-00001" summary="insert material type CRUD">
       <option name="closed" value="true" />
@@ -229,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714418730146</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="insert material group CRUD">
+      <option name="closed" value="true" />
+      <created>1714427387976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714427387976</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +250,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="insert material type CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="insert material type CRUD" />
+    <MESSAGE value="insert material group CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert material group CRUD" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/HopeServises/app/Models/Material.php</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

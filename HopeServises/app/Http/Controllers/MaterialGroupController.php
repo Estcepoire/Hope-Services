@@ -15,7 +15,7 @@ class MaterialGroupController extends Controller
     public function index()
     {
         //get all data includes material types with name
-        $materialGroups = MaterialGroup::with('materialType')->get();
+        $materialGroups = MaterialGroup::whereHas('materialType')->with('materialType')->get();
         return Inertia::render('MaterialGroup/Index', [
             'materialGroups' => $materialGroups
         ]);
@@ -79,6 +79,7 @@ class MaterialGroupController extends Controller
         $name = $request->input('name');
         $materialTypeId = $request->input('material_type_id');
         $materialGroup = MaterialGroup::find($id);
+        dd($materialGroup);die();
         $materialGroup->name = $name;
         $materialGroup->material_type_id = $materialTypeId;
         $materialGroup->save();
