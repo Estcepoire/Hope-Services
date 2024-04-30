@@ -28,9 +28,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('material-types', MaterialTypeController::class);
-
-//Route::put('/material-groups/{id}', [MaterialGroupController::class, 'update'])->name('material-groups.update');
 Route::resource('material-groups', MaterialGroupController::class);
-
 Route::resource('materials', MaterialController::class);
+
+Route::get('api/materials', [MaterialController::class, 'apiIndex']);
+Route::get('api/material-groups', [MaterialGroupController::class, 'apiIndex']);
+Route::get('api/material-types', [MaterialTypeController::class, 'apiIndex']);
 require __DIR__.'/auth.php';

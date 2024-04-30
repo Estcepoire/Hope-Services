@@ -96,4 +96,10 @@ class MaterialTypeController extends Controller
         //return redirect()->route('material-types.index');
         dd("Material type deleted successfully");
     }
+
+    public function materialTypes()
+    {
+        $materialTypes = MaterialType::all();
+        return response()->json($materialTypes);
+    }
 }

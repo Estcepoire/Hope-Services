@@ -98,4 +98,11 @@ class MaterialGroupController extends Controller
         //return redirect()->route('material-groups.index');
         dd("Material group deleted successfully");
     }
+
+    public function apiIndex()
+    {
+        //get all data includes material types with name
+        $materialGroups = MaterialGroup::whereHas('materialType')->with('materialType')->get();
+        return response()->json($materialGroups);
+    }
 }

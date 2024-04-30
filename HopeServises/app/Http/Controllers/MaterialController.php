@@ -99,4 +99,11 @@ class MaterialController extends Controller
         $material->delete();
         dd("Material deleted successfully");
     }
+
+
+    public function apiIndex()
+    {
+        $materials = Material::whereHas('materialGroup')->with('materialGroup')->get();
+        return response()->json($materials);
+    }
 }
