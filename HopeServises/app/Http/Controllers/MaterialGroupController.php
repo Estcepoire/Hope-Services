@@ -79,7 +79,7 @@ class MaterialGroupController extends Controller
         $name = $request->input('name');
         $materialTypeId = $request->input('material_type_id');
         $materialGroup = MaterialGroup::find($id);
-        dd($materialGroup);die();
+        //dd($materialGroup);die();
         $materialGroup->name = $name;
         $materialGroup->material_type_id = $materialTypeId;
         $materialGroup->save();
