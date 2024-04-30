@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\MaterialGroupController;
 use App\Http\Controllers\MaterialTypeController;
 use App\Http\Controllers\ProfileController;
@@ -16,14 +17,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/post-announcement', function () {
-    return Inertia::render('Announcement/AnnouncementForm', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/post-announcement', [AnnouncementController::class, 'form'])->name('announcement.form');
+Route::post('/post-announcement', [AnnouncementController::class, 'store'])->name('announcement.store');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
