@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef86e5ea-e818-4be8-baed-ce4e906aee66" name="Changes" comment="add APIRest functions">
+    <list default="true" id="ef86e5ea-e818-4be8-baed-ce4e906aee66" name="Changes" comment="remove some comments">
+      <change afterPath="$PROJECT_DIR$/HopeServises/database/migrations/2024_05_01_155050_create_table_material_type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/database/migrations/2024_05_01_155101_create_table_material_group.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HopeServises/database/migrations/2024_05_01_155124_create_table_material.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialGroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/HopeServises/app/Http/Controllers/MaterialGroupController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +217,8 @@
       <workItem from="1714379996687" duration="356000" />
       <workItem from="1714409230233" duration="18194000" />
       <workItem from="1714456090038" duration="9126000" />
-      <workItem from="1714498988486" duration="786000" />
+      <workItem from="1714498988486" duration="2732000" />
+      <workItem from="1714578540148" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="insert material type CRUD">
       <option name="closed" value="true" />
@@ -249,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714465688893</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="remove some comments">
+      <option name="closed" value="true" />
+      <created>1714499865147</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714499865147</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +272,8 @@
     <MESSAGE value="insert material group CRUD" />
     <MESSAGE value="insert material CRUD" />
     <MESSAGE value="add APIRest functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add APIRest functions" />
+    <MESSAGE value="remove some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove some comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
