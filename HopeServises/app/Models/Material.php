@@ -25,4 +25,9 @@ class Material extends Model
         'name',
         'material_group_id'
     ];
+
+    public function materialGroup(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(MaterialGroup::class, 'material_group_id', 'id');
+    }
 }
