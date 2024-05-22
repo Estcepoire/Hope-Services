@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->double('quantity')->nullable(false);
             $table->double('longitude')->nullable(false);
             $table->double('latitude')->nullable(false);
+            $table->longText('description')->nullable(false);
             $table->integer('state')->nullable(false);
             $table->timestamps();
         });
