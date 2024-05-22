@@ -35,7 +35,7 @@ Route::resource('material-types', MaterialTypeController::class);
 Route::resource('material-groups', MaterialGroupController::class);
 Route::resource('materials', MaterialController::class);
 
-Route::get('api/materials', [MaterialController::class, 'apiIndex']);
-Route::get('api/material-groups', [MaterialGroupController::class, 'apiIndex']);
+Route::get('api/materials/group/{material_group_id}', [MaterialController::class, 'apiIndex'])->name('api.materials.group');
+Route::get('api/material-groups/type/{material_type_id}', [MaterialGroupController::class, 'apiIndex'])->name('api.material-groups.type');
 Route::get('api/material-types', [MaterialTypeController::class, 'apiIndex']);
 require __DIR__ . '/auth.php';

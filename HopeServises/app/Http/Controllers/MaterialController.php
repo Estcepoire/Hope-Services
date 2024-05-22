@@ -101,9 +101,9 @@ class MaterialController extends Controller
     }
 
 
-    public function apiIndex()
+    public function apiIndex($material_group_id)
     {
-        $materials = Material::whereHas('materialGroup')->with('materialGroup')->get();
+        $materials = Material::where('material_group_id', $material_group_id)->get();
         return response()->json($materials);
     }
 }

@@ -2,9 +2,12 @@ import "./Announcement.css";
 
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { useForm } from "@inertiajs/react";
+import { useState } from 'react';
 
 export default function AnnouncementForm({ materialTypes }) {
-    
+    const [materialGroups, setMaterialGroups] = useState([])
+    const [materials, setMaterials] = useState([])
+
     const { data, setData, post } = useForm({
         materialTypeId: null,
         materialGroupId: null,
@@ -14,6 +17,20 @@ export default function AnnouncementForm({ materialTypes }) {
         file: null,
         description: null
     })
+
+    const fetchMaterialGroups = (materialTypeId) => {
+        axios.get(route('api.material-groups.type', { material_type_id: materialTypeId }))
+            .then(response => {
+                setMaterialGroups(response.data)
+            })
+    }
+
+    const fetchMaterials = (materialGroupId) => {
+        axios.get(route('api.materials.group', { material_group_id: materialGroupId }))
+            .then(response => {
+                setMaterials(response.data)
+            })
+    }
 
     function submit(e) {
         e.preventDefault();
@@ -34,7 +51,7 @@ export default function AnnouncementForm({ materialTypes }) {
                         id="materialType"
                         name="materialTypeId"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        onChange={(e) => setData("materialTypeId", e.target.value)}
+                        onChange={(e) => { setData("materialTypeId", e.target.value);  fetchMaterialGroups(e.target.value)}}
                     >
                         <option value="-1">Choose</option>
                         {materialTypes.map((materialType) => {
@@ -53,9 +70,12 @@ export default function AnnouncementForm({ materialTypes }) {
                         id="materialGroup"
                         name="materialGroupId"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        onChange={(e) => setData("materialGroupId", e.target.value)}
+                        onChange={(e) => {setData("materialGroupId", e.target.value); fetchMaterials(e.target.value)}}
                     >
                         <option value="-1">Choose</option>
+                        {materialGroups.map((materialGroup) => {
+                            return <option key={materialGroup.id} value={materialGroup.id}>{materialGroup.name}</option>
+                        })}
                     </select>
                 </div>
                 <div className="mt-2">
@@ -72,6 +92,9 @@ export default function AnnouncementForm({ materialTypes }) {
                         onChange={(e) => setData("materialId", e.target.value)}
                     >
                         <option value="-1">Choose</option>
+                        {materials.map((material) => {
+                            return <option key={material.id} value={material.id}>{material.name}</option>
+                        })}
                     </select>
                 </div>
                 <div className="mt-2">
