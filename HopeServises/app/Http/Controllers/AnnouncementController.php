@@ -8,6 +8,11 @@ use Inertia\Inertia;
 
 class AnnouncementController extends Controller
 {
+    public function list()
+    {
+        return Inertia::render('AnnouncementList/AnnouncementList');
+    }
+
     public function form()
     {
         $materialTypes = MaterialType::all();

@@ -18,6 +18,7 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/announcement', [AnnouncementController::class, 'list'])->name('announcement.list');
 Route::get('/post-announcement', [AnnouncementController::class, 'form'])->name('announcement.form');
 Route::post('/post-announcement', [AnnouncementController::class, 'store'])->name('announcement.store');
 
