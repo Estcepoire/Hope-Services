@@ -4,6 +4,7 @@ use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\MaterialGroupController;
 use App\Http\Controllers\MaterialTypeController;
+use App\Http\Controllers\ProductSheetController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,11 @@ Route::get('/', function () {
 
 Route::get('/post-announcement', [AnnouncementController::class, 'form'])->name('announcement.form');
 Route::post('/post-announcement', [AnnouncementController::class, 'store'])->name('announcement.store');
+
+
+// Announcement details
+Route::get('/post-announcement-details',[ProductSheetController::class, 'details'])->name('announcement.details');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
