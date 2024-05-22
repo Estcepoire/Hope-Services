@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\MaterialController;
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\MaterialGroupController;
+use App\Http\Controllers\MaterialTypeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +18,9 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/post-announcement', [AnnouncementController::class, 'form'])->name('announcement.form');
+Route::post('/post-announcement', [AnnouncementController::class, 'store'])->name('announcement.store');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -24,4 +31,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::resource('material-types', MaterialTypeController::class);
+Route::resource('material-groups', MaterialGroupController::class);
+Route::resource('materials', MaterialController::class);
+
+Route::get('api/materials/group/{material_group_id}', [MaterialController::class, 'apiIndex'])->name('api.materials.group');
+Route::get('api/material-groups/type/{material_type_id}', [MaterialGroupController::class, 'apiIndex'])->name('api.material-groups.type');
+Route::get('api/material-types', [MaterialTypeController::class, 'apiIndex']);
+require __DIR__ . '/auth.php';
