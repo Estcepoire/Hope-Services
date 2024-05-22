@@ -6,6 +6,7 @@ use App\Http\Controllers\MaterialGroupController;
 use App\Http\Controllers\MaterialTypeController;
 use App\Http\Controllers\ProductSheetController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AchatController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -26,6 +27,9 @@ Route::post('/post-announcement', [AnnouncementController::class, 'store'])->nam
 // Announcement details
 Route::get('/post-announcement-details',[ProductSheetController::class, 'details'])->name('announcement.details');
 
+
+// Purchase
+Route::get('/post-announcement-purchase',[AchatController::class, 'form'])->name('announcement.purchase');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
